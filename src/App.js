@@ -17,7 +17,7 @@ const App = () => {
         <h1>Todo List</h1>
       </header>
       { !authenticated && <Login setAuthenticated={setAuthenticated}/> }
-      { authenticated && <TodoApp /> }
+      { authenticated && <TodoApp setAuthenticated={ setAuthenticated } /> }
     </>
   );
 };

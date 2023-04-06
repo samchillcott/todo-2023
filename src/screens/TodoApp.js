@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Form from '../components/Form'
 import TodoList from '../components/TodoList'
 
-const TodoApp = () => {
+const TodoApp = ({ setAuthenticated }) => {
   const [inputText, setInputText] = useState("")
   const [todos, setTodos] = useState([])
   const [status, setStatus] = useState("all")
@@ -58,6 +58,11 @@ const TodoApp = () => {
         setTodos={ setTodos }
         filteredTodos={ filteredTodos }
       />
+      <button
+        className='logout-button'
+        onClick={() => setAuthenticated(false)}>
+        Logout
+      </button>
     </div>
   );
 }
