@@ -9,13 +9,8 @@ const Login = ({ setAuthenticated }) => {
     e.preventDefault();
 
     try {
-      // const response = await axios.post('/api/login', { email, password });
-
-      // // Set cookie with unique identifier
-      // document.cookie = `token=${response.data.token}; path=/`;
-
-      // // Redirect to todos page
-      // window.location.href = '/todos';
+      const token = Math.random().toString(36).slice(2, 17);
+      document.cookie = `token=${token}; path=/`;
       setAuthenticated(true)
     } catch (error) {
       console.error(error);
