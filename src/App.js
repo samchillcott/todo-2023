@@ -6,14 +6,17 @@ import "./App.css"
 const App = () => {
   const [authenticated, setAuthenticated] = useState(true);
 
-  // useEffect(() => {
-  //   const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
-  //   setAuthenticated(!!token);
-  // }, []);
+  useEffect(() => {
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, '$1');
+    setAuthenticated(!!token);
+  }, []);
 
   return (
     <>
-      { !authenticated && <Login /> }
+      <header>
+        <h1>Todo List</h1>
+      </header>
+      { !authenticated && <Login setAuthenticated={setAuthenticated}/> }
       { authenticated && <TodoApp /> }
     </>
   );

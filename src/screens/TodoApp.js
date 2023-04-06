@@ -46,9 +46,6 @@ const TodoApp = () => {
 
   return (
     <div className="App">
-      <header>
-        <h1>Todo List</h1>
-      </header>
       <Form
         inputText={ inputText }
         setInputText={ setInputText }

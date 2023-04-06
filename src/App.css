@@ -133,6 +133,13 @@ select {
   width: 12rem;
 }
 
+.login {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* Arrow */
 .select::after {
   content: "\25BC";
