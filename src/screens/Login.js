@@ -10,17 +10,14 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate a network delay of 1 second
     setTimeout(() => {
-      // Mock response data
       const response = {
         status: 'success',
         data: {
           email,
         },
       };
-      // Set cookie and redirect to home page if login is successful
-      Cookies.set('user', response.data.email );
+      Cookies.set('user', response.data.email);
       navigate('/');
     }, 1000);
   };

@@ -51,7 +51,6 @@ const TodoApp = () => {
   }
 
   const handleLogout = () => {
-    // Remove the "user" cookie and navigate to the login page
     Cookies.remove('user');
     navigate('/login');
   };
