@@ -1,5 +1,8 @@
 # Todo App
 
-- Todo App containing add, mark complete, delete and edit functionality.
+Todo App with the following features:
+
+- Add, mark complete, delete and edit todo.
+- Filter todos by Complete/Incomplete.
 - Auth handled with cookies.
-- Todos stored locally with Local Storage
+- Todos stored locally with local storage
