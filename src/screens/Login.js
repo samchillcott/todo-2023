@@ -1,20 +1,28 @@
-import axios from 'axios';
 import React, { useState } from 'react'
+
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 const Login = ({ setAuthenticated }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const token = Math.random().toString(36).slice(2, 17);
-      document.cookie = `token=${token}; path=/`;
-      setAuthenticated(true)
-    } catch (error) {
-      console.error(error);
-    }
+    // Simulate a network delay of 1 second
+    setTimeout(() => {
+      // Mock response data
+      const response = {
+        status: 'success',
+        data: {
+          email,
+        },
+      };
+      // Set cookie and redirect to home page if login is successful
+      Cookies.set('user', { email });
+      navigate('/');
+    }, 1000);
   };
 
   return (
