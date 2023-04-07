@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
+
+import Cookies from 'js-cookie'
+import { useNavigate } from 'react-router-dom';
+
 import Form from '../components/Form'
 import TodoList from '../components/TodoList'
 
-const TodoApp = ({ setAuthenticated }) => {
+
+const TodoApp = () => {
   const [inputText, setInputText] = useState("")
   const [todos, setTodos] = useState([])
   const [status, setStatus] = useState("all")
   const [filteredTodos, setFilteredTodos] = useState([])
+  const navigate = useNavigate();
 
   useEffect(() => {
     getLocalTodos()
@@ -44,6 +50,12 @@ const TodoApp = ({ setAuthenticated }) => {
     }
   }
 
+  const handleLogout = () => {
+    // Remove the "user" cookie and navigate to the login page
+    Cookies.remove('user');
+    navigate('/login');
+  };
+
   return (
     <div className="App">
       <Form
@@ -60,7 +72,7 @@ const TodoApp = ({ setAuthenticated }) => {
       />
       <button
         className='logout-button'
-        onClick={() => setAuthenticated(false)}>
+        onClick={ handleLogout }>
         Logout
       </button>
     </div>
