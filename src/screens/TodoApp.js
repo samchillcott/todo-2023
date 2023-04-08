@@ -38,7 +38,9 @@ const TodoApp = () => {
   }
 
   const saveLocalTodos = () => {
-    localStorage.setItem('todos', JSON.stringify(todos))
+    if (todos.length !== 0) {
+      localStorage.setItem("todos", JSON.stringify(todos))
+    }
   }
 
   const getLocalTodos = () => {
@@ -46,7 +48,9 @@ const TodoApp = () => {
       localStorage.setItem('todos', JSON.stringify([]))
     } else {
       let localTodos = JSON.parse(localStorage.getItem('todos'))
+      console.log("localTodos", localTodos);
       setTodos(localTodos)
+      console.log("todos", todos);
     }
   }
 
