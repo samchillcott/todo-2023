@@ -33,8 +33,9 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         value={ inputText }
         onChange={ inputTextHandler }
         className="todo-input"
+        placeholder="Enter a Todo"
       />
-      <button type="submit" onClick={ submitTodoHandler } className="todo-button">
+      <button type="submit" onClick={ submitTodoHandler } className="todo-button" data-testid="add-todo">
         <i class="fas fa-plus-square"></i>
       </button>
       <div className="select">
