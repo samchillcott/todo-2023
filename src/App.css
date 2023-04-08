@@ -10,14 +10,3 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
-
-header {
-  font-size: 2rem;
-}
-
-header {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
