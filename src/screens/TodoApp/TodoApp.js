@@ -59,7 +59,15 @@ const TodoApp = () => {
   };
 
   return (
-    <div className="App">
+    <div>
+      <div className="logout-wrapper">
+        <button
+          className='logout-button'
+          onClick={ handleLogout }>
+            Logout
+          <i class="fa-light fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
       <Form
         inputText={ inputText }
         setInputText={ setInputText }
@@ -72,11 +80,6 @@ const TodoApp = () => {
         setTodos={ setTodos }
         filteredTodos={ filteredTodos }
       />
-      <button
-        className='logout-button'
-        onClick={ handleLogout }>
-        Logout
-      </button>
     </div>
   );
 }
