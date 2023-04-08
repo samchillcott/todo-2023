@@ -25,6 +25,11 @@ form button:hover {
   color: white;
 }
 
+.todo-input {
+  border: none;
+  outline: none
+}
+
 /* Custom Select */
 .select {
   margin: 1rem;

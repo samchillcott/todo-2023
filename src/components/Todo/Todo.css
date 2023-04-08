@@ -11,6 +11,8 @@
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  border: none;
+  outline: none
 }
 
 .trash-btn,
@@ -35,6 +37,7 @@
 
 .todo-item {
   padding: 0rem 0.5rem;
+  font-size: 1.5rem;
 }
 
 .fa-trash,
