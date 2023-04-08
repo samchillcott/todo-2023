@@ -48,14 +48,13 @@ const TodoApp = () => {
       localStorage.setItem('todos', JSON.stringify([]))
     } else {
       let localTodos = JSON.parse(localStorage.getItem('todos'))
-      console.log("localTodos", localTodos);
       setTodos(localTodos)
-      console.log("todos", todos);
     }
   }
 
   const handleLogout = () => {
     Cookies.remove('user');
+    localStorage.clear()
     navigate('/login');
   };
 
