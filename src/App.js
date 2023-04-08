@@ -9,14 +9,17 @@ import PrivateRoutes from './routing/PrivateRoutes';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={ <Login /> } />
-        <Route element={ <PrivateRoutes /> }>
-          <Route path="/" element={ <TodoApp /> } />
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <header>ToDo App</header>
+      <Router>
+        <Routes>
+          <Route path="/login" element={ <Login /> } />
+          <Route element={ <PrivateRoutes /> }>
+            <Route path="/" element={ <TodoApp /> } />
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 };
 

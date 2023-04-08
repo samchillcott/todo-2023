@@ -60,7 +60,6 @@ const TodoApp = () => {
 
   return (
     <div className="App">
-      <header>ToDo App</header>
       <Form
         inputText={ inputText }
         setInputText={ setInputText }
