@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom';
 
-import Form from '../components/Form/Form'
-import TodoList from '../components/TodoList/TodoList'
-
+import Form from '../../components/Form/Form'
+import TodoList from '../../components/TodoList/TodoList'
+import "./TodoApp.css"
 
 const TodoApp = () => {
   const [inputText, setInputText] = useState("")

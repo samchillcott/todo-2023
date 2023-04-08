@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-const Todo = ({ text, id, todos, setTodos, todo }) => {
+import "./Todo.css"
+
+const Todo = ({ text, todos, setTodos, todo }) => {
   const [editMode, setEditMode] = useState(false);
   const [updatedText, setUpdatedText] = useState(text);
 
@@ -40,7 +42,7 @@ const Todo = ({ text, id, todos, setTodos, todo }) => {
         editMode ? (
           <>
             <input
-              className="todo-input"
+              className="todo"
               type='text'
               value={ updatedText }
               onChange={ (e) => setUpdatedText(e.target.value) }

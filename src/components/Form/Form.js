@@ -1,3 +1,5 @@
+import "./Form.css"
+
 import { v4 as uuid } from 'uuid';
 
 const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
