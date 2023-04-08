@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -13,7 +15,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         {
           text: inputText,
           complete: false,
-          id: Math.random() * 1000
+          id: uuid()
         }
       ])
       setInputText("")
