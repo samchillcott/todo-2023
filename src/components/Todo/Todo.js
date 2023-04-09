@@ -61,6 +61,7 @@ const Todo = ({ text, todos, setTodos, todo }) => {
             </li>
             <button
               className='edit-btn'
+              title='Edit todo'
               onClick={ editHandler }
             >
               <i className='fas fa-edit'></i>
