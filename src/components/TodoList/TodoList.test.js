@@ -1,21 +1,22 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import TodoList from './TodoList'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import TodoList from './TodoList';
 
 describe('TodoList', () => {
   const todos = [
-    { id: 1, text: 'First todo' },
-    { id: 2, text: 'Second todo' },
-    { id: 3, text: 'Third todo' }
-  ]
-  const setTodos = jest.fn()
-  const filteredTodos = todos
+    { id: 1, text: 'Add E2E tests' },
+    { id: 2, text: 'Fix the CSS' },
+    { id: 3, text: 'Deploy' },
+  ];
+  const setTodos = jest.fn();
+  const filteredTodos = todos;
 
-  it('renders a list of todos', () => {
-    render(<TodoList todos={ todos } setTodos={ setTodos } filteredTodos={ filteredTodos } />)
-    expect(screen.getByText('First todo')).toBeInTheDocument()
-    expect(screen.getByText('Second todo')).toBeInTheDocument()
-    expect(screen.getByText('Third todo')).toBeInTheDocument()
-  })
-})
+  it('renders the list of todos', () => {
+    render(<TodoList todos={ todos } setTodos={ setTodos } filteredTodos={ filteredTodos } />);
+    const todoItems = screen.queryAllByRole('listitem');
+    const element = screen.getByText(/Add E2E tests/);
+    expect(element).toBeInTheDocument();
+    expect(todoItems).toHaveLength(todos.length);
+  });
+});
