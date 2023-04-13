@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Form from '../../components/Form/Form'
 import TodoList from '../../components/TodoList/TodoList'
-import "./TodoApp.css"
+import styles from "./TodoApp.module.css"
 
 const TodoApp = () => {
   const [inputText, setInputText] = useState("")
@@ -60,9 +60,9 @@ const TodoApp = () => {
 
   return (
     <div>
-      <div className="logout-wrapper">
+      <div className={styles.logoutWrapper}>
         <button
-          className='logout-button'
+          className={styles.logoutButton}
           onClick={ handleLogout }>
             Logout
           <i class="fa-light fa-arrow-right-from-bracket"></i>

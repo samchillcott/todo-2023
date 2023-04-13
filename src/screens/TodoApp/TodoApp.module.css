@@ -1,9 +1,9 @@
-.logout-wrapper {
+.logoutWrapper {
   display: flex;
   justify-content: flex-end;
 }
 
-.logout-button {
+.logoutButton {
   color: #ff6f47;
   background: #f7fffe;
   cursor: pointer;
@@ -14,7 +14,7 @@
   background: white;
 }
 
-.logout-button:hover {
+.logoutButton:hover {
   background: #ff6f47;
   color: white;
 }

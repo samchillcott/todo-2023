@@ -1,10 +1,10 @@
-.todo-container {
+.todoContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.todo-list {
+.todoList {
   min-width: 30%;
   list-style: none;
 }

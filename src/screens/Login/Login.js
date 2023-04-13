@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
-import "./Login.css"
+import styles from "./Login.module.css"
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={ handleSubmit } className='login'>
+    <form onSubmit={ handleSubmit } className={styles.login}>
       <input
         type="email"
         placeholder="Email"

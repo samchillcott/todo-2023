@@ -1,11 +1,11 @@
 import React from 'react'
 import Todo from '../Todo/Todo'
-import "./TodoList.css"
+import styles from "./TodoList.module.css"
 
 const TodoList = ({ todos, setTodos, filteredTodos }) => {
   return (
-    <div className="todo-container">
-      <ul className="todo-list">
+    <div className={ styles.todoContainer }>
+      <ul className={ styles.todoList }>
         { filteredTodos.map((todo) => (
           <Todo
             key={ todo.id }

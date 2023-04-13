@@ -6,3 +6,4 @@ Todo App with the following features:
 - Filter todos by Complete/Incomplete.
 - Auth handled with cookies.
 - Todos stored locally with local storage
+- Styled using CSS Modules

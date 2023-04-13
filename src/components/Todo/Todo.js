@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import "./Todo.css"
+import styles from "./Todo.module.css"
 
 const Todo = ({ text, todos, setTodos, todo }) => {
   const [editMode, setEditMode] = useState(false);
@@ -37,18 +37,18 @@ const Todo = ({ text, todos, setTodos, todo }) => {
   }
 
   return (
-    <div className='todo'>
+    <div className={ styles.todo }>
       {
         editMode ? (
           <>
             <input
-              className="todo"
+              className={ styles.todo }
               type='text'
               value={ updatedText }
               onChange={ (e) => setUpdatedText(e.target.value) }
             />
             <button
-              className='save-btn'
+              className={ styles.saveButton }
               onClick={ updateHandler }
             >
               <i className='fas fa-save'></i>
@@ -56,24 +56,24 @@ const Todo = ({ text, todos, setTodos, todo }) => {
           </>
         ) : (
           <>
-            <li className={ `todo-item ${todo.complete ? "complete" : ""}` }>
+            <li className={ `${styles.todoItem} ${todo.complete ? styles.complete : ""}` }>
               { text }
             </li>
             <button
-              className='edit-btn'
+              className={ styles.editButton }
               title='Edit todo'
               onClick={ editHandler }
             >
               <i className='fas fa-edit'></i>
             </button>
             <button
-              className='complete-btn'
+              className={ styles.completeButton }
               onClick={ completeHandler }
             >
               <i className='fas fa-check'></i>
             </button>
             <button
-              className='trash-btn'
+              className={ styles.trashButton }
               onClick={ deleteHandler }
             >
               <i className='fas fa-trash'></i>

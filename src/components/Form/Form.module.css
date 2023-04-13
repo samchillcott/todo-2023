@@ -25,7 +25,7 @@ form button:hover {
   color: white;
 }
 
-.todo-input {
+.todoInput {
   border: none;
   outline: none
 }
@@ -68,6 +68,6 @@ select {
   pointer-events: none;
 }
 
-.filter-todo {
+.filterTodo {
   padding: 1rem;
 }

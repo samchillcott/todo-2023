@@ -1,4 +1,4 @@
-import "./Form.css"
+import styles from "./Form.module.css"
 
 import { v4 as uuid } from 'uuid';
 
@@ -34,14 +34,14 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         type="text"
         value={ inputText }
         onChange={ inputTextHandler }
-        className="todo-input"
+        className={ styles.todoInput }
         placeholder="Enter a Todo"
       />
-      <button type="submit" onClick={ submitTodoHandler } className="todo-button" data-testid="add-todo">
+      <button type="submit" onClick={ submitTodoHandler } className={ styles.todoButton } data-testid="add-todo">
         <i class="fas fa-plus-square"></i>
       </button>
-      <div className="select">
-        <select name="todos" className="filter-todo" onChange={ statusHandler }>
+      <div className={styles.select}>
+        <select name="todos" className={ styles.filterTodo } onChange={ statusHandler }>
           <option value="all">All</option>
           <option value="complete">Complete</option>
           <option value="incomplete">Incomplete</option>
