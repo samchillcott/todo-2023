@@ -1,6 +1,9 @@
 import styles from "./Form.module.css"
 
 import { v4 as uuid } from 'uuid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquarePlus } from '@fortawesome/free-solid-svg-icons'
+
 
 const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
   const inputTextHandler = (e) => {
@@ -38,9 +41,10 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         placeholder="Enter a Todo"
       />
       <button type="submit" onClick={ submitTodoHandler } className={ styles.todoButton } data-testid="add-todo">
-        <i class="fas fa-plus-square"></i>
+        {/* <i class="fas fa-plus-square"></i> */ }
+        <FontAwesomeIcon icon={ faSquarePlus } />
       </button>
-      <div className={styles.select}>
+      <div className={ styles.select }>
         <select name="todos" className={ styles.filterTodo } onChange={ statusHandler }>
           <option value="all">All</option>
           <option value="complete">Complete</option>
