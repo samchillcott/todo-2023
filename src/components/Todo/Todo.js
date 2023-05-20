@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
 import styles from "./Todo.module.css"
 
 const Todo = ({ text, todos, setTodos, todo }) => {
@@ -51,7 +57,7 @@ const Todo = ({ text, todos, setTodos, todo }) => {
               className={ styles.saveButton }
               onClick={ updateHandler }
             >
-              <i className='fas fa-save'></i>
+              <FontAwesomeIcon icon={ faFloppyDisk } />
             </button>
           </>
         ) : (
@@ -64,24 +70,23 @@ const Todo = ({ text, todos, setTodos, todo }) => {
               title='Edit todo'
               onClick={ editHandler }
             >
-              <i className='fas fa-edit'></i>
+              <FontAwesomeIcon icon={ faPenToSquare } />
             </button>
             <button
               className={ styles.completeButton }
               onClick={ completeHandler }
             >
-              <i className='fas fa-check'></i>
+              <FontAwesomeIcon icon={ faCheck } />
             </button>
             <button
               className={ styles.trashButton }
               onClick={ deleteHandler }
             >
-              <i className='fas fa-trash'></i>
+              <FontAwesomeIcon icon={ faTrash } />
             </button>
           </>
         )
       }
-
     </div>
   )
 }
